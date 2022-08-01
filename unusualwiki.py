@@ -1,12 +1,14 @@
-from flask import Flask
 import json
 from pprint import pprint
 import random
 
+from flask import Flask
+
+
 app = Flask(__name__)
 
-with open('dataset.json') as f:
-    all_results = json.loads(f.read())
+with open('./wiki.json') as f:
+    all_results = json.loads(f.read())['articles']
 with open('index.html') as f:
     page = f.read()
 
