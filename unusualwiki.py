@@ -13,7 +13,11 @@ with open('index.html') as f:
     page = f.read()
 
 LEN_ARTICLES = len(all_results)
-print("Article count:", LEN_ARTICLES)
+print(f"Serving {LEN_ARTICLES} articles...")
+
+
+def make_url(title, link):
+    return f"""<a href="{link}">{title}</a>"""
 
 @app.route('/')
 def hello():
@@ -21,4 +25,6 @@ def hello():
     title = all_results[n]['title']
     desc = all_results[n]['desc']
     url = all_results[n]['url']
-    return page.replace('%%TITLE%%', title).replace('%%DESC%%', desc).replace('%%URL%%', url)
+    return (page
+        .replace('%%HEADING%%', make_url(title, url))
+        .replace('%%DESC%%', desc))
