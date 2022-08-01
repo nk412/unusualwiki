@@ -1,0 +1,53 @@
+
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Unusual Wikipedia</title>
+    <style>
+      body {
+          max-width: 40%;
+          margin: 7% auto;
+          padding-left: 0%;
+          padding-right: 25%;
+          text-align: left;
+          font-family: 'Bellefair', serif;
+          font-size: 22px;
+          color: #232b2b;
+          background-color: #EAEFF2;
+      }
+      hr { background-color: #BBBBBB; height: 1px; border: 0; margin: 3em 0; padding: 0;}
+      a { color: 232b2b; }
+      nope_a:link { text-decoration: none; }
+      a:hover { color: indianred; }
+      h1 { font-family: 'DM Serif Display', serif; font-size: 56px;}
+      .desc { font-size: 36px; text-align: justify;}
+      @media (max-width: 1000px) {
+        body {
+           max-width: 90%;
+           padding-left: 5%;
+           padding-right: 5%;
+           font-size: 22px;
+         }
+        h1 { font-size: 48px;}
+        .desc { font-size: 28px; }
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1><a href="%%URL%%">
+%%TITLE%%
+</a></h1>
+    <div class="desc">
+%%DESC%%
+    </div>
+
+    <hr>
+    <a href=".">Show me another unusual article on Wikipedia</a>
+   
+  </body>
+</html>
+
