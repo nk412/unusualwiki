@@ -47,6 +47,6 @@ def about():
         ONE_PAGE
             .replace('%%HEADING%%', "About")
             .replace('%%DESC%%', ABOUT)
-            .replace("Articles on Wikipedia</h2>", f"Articles on Wikipedia<br>// Made by {make_url('nk412', 'https://nk412.github.io')}</h2>")
+            .replace("Articles on Wikipedia</h2>", f"Articles on Wikipedia<br>// Made by {make_url('nk412', 'https://nk412.com')}</h2>")
             .replace("another!", "one!")
     )
