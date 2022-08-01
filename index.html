@@ -1,4 +1,3 @@
-
 <html>
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -8,7 +7,7 @@
     <title>Unusual Wikipedia</title>
     <style>
       body {
-          max-width: 40%;
+          max-width: 50%;
           margin: 7% auto;
           padding-left: 0%;
           padding-right: 25%;
@@ -18,19 +17,27 @@
           color: #232b2b;
           background-color: #EAEFF2;
       }
-      hr { background-color: #BBBBBB; height: 1px; border: 0; margin: 3em 0; padding: 0;}
+      hr { background-color: #BBBBBB;
+           height: 1px;
+           border: 0;
+           padding: 0;
+           margin-top: 3em;
+           margin-bottom: 0em;
+      }
       a { color: 232b2b; }
       nope_a:link { text-decoration: none; }
       a:hover { color: indianred; }
       h1 { font-family: 'DM Serif Display', serif; font-size: 56px;}
+      h2 { font-family: monospace; font-size: 14px;
+           font-weight: lighter; color: #BBBBBB; margin-top: 0.1em; margin-bottom: 3em}
       .desc { font-size: 36px; text-align: justify;}
-      @media (max-width: 1000px) {
+      @media (max-width: 800px) {
         body {
            max-width: 90%;
            padding-left: 5%;
            padding-right: 5%;
            font-size: 22px;
-         }
+        }
         h1 { font-size: 48px;}
         .desc { font-size: 28px; }
       }
@@ -38,16 +45,16 @@
     </style>
   </head>
   <body>
-    <h1><a href="%%URL%%">
-%%TITLE%%
-</a></h1>
-    <div class="desc">
-%%DESC%%
-    </div>
+
+    <h1><a href="%%URL%%">%%TITLE%%</a></h1>
+    <div class="desc">%%DESC%%</div>
 
     <hr>
-    <a href=".">Show me another unusual article on Wikipedia</a>
-   
+    <h2>// <i>Unusual</i> Articles on Wikipedia</h2>
+
+    <a href=".">Show me another!</a>
+    <span style="float:right;"><a href=".">About</a><br></span>
+
   </body>
 </html>
 
