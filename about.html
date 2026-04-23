@@ -5,7 +5,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=DM+Serif+Display&display=swap" rel="stylesheet">
     <meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Unusual Wikipedia</title>
+    <title>Unusual Wikipedia — About</title>
     <style>
       body {
           max-width: 40%;
@@ -46,35 +46,21 @@
   </head>
   <body>
 
-    <h1 id="heading">&nbsp;</h1>
-    <div class="desc" id="desc">&nbsp;</div>
+    <h1>About</h1>
+    <div class="desc"><small>
+      The <a href="https://en.wikipedia.org/wiki/Wikipedia:Unusual_articles">list of unusual articles</a> on Wikipedia
+      contains over <i>two thousand</i> entries on fascinating places, objects and individuals, but the layout does
+      not help with aimless discovery.<br><br>
+
+      This page showcases many of these, as well as some I've stumbled across along the way—which I should probably
+      add to the wiki.
+    </small></div>
 
     <hr>
-    <h2>// <i>Unusual</i> Articles on Wikipedia</h2>
+    <h2>// <i>Unusual</i> Articles on Wikipedia<br>// Made by <a href="https://nk412.com">nk412</a></h2>
 
-    <a href="#" id="another">Show me another!</a>
+    <a href="index.html">Show me one!</a>
     <span style="float:right;"><a href="about.html">About</a><br></span>
-
-    <script>
-      let articles = [];
-
-      function pick() {
-        if (!articles.length) return;
-        const a = articles[Math.floor(Math.random() * articles.length)];
-        document.getElementById('heading').innerHTML =
-          `<a href="${a.url}">${a.title}</a>`;
-        document.getElementById('desc').textContent = a.desc;
-      }
-
-      document.getElementById('another').addEventListener('click', (e) => {
-        e.preventDefault();
-        pick();
-      });
-
-      fetch('wiki.json')
-        .then(r => r.json())
-        .then(data => { articles = data.articles; pick(); });
-    </script>
 
   </body>
 </html>
