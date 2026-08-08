@@ -14,5 +14,6 @@
   },
   "routes": [
     { "pattern": "unusualwiki.nk412.com", "custom_domain": true }
-  ]
+  ],
+  "workers_dev": true
 }
