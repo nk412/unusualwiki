@@ -1,0 +1,18 @@
+{
+  // Unusual Wikipedia articles — static assets only, no Worker script.
+  // Deploy: npx wrangler deploy   (runs build.sh, uploads dist/)
+  "name": "unusualwiki",
+  "compatibility_date": "2026-08-08",
+  "assets": {
+    "directory": "./dist",
+    // serve index.html for "/" and clean URLs
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  "build": {
+    "command": "./build.sh"
+  },
+  "routes": [
+    { "pattern": "unusualwiki.nk412.com", "custom_domain": true }
+  ]
+}
